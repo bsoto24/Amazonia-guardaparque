@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="pe.openlab.amazoniaapp.ui.help.HelpActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ToolbarNormal"
+        app:titleTextColor="@color/white" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/peru_natural" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:text="Perú Natural"
+                android:textColor="@color/textNormal"
+                android:textSize="@dimen/title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:scrollbarSize="@dimen/normal"
+                android:text="La aplicación está diseñada para que registres el número de visitantes peruanos y extranjeros que visitan tu área natural"
+                android:textColor="@color/textNormal"
+                android:textSize="@dimen/normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbarSize="@dimen/normal"
+                android:text="Paso 1"
+                android:textColor="@color/textNormal"
+                android:textSize="@dimen/normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="@dimen/normal"
+                android:text="Ingresa el número de visitantes extranjeros o peruanos dando click a los botones de [+] o [-]"
+                android:textColor="@color/textNormal"
+                android:textSize="@dimen/normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scrollbarSize="@dimen/normal"
+                android:text="Paso 2"
+                android:textColor="@color/textNormal"
+                android:textSize="@dimen/normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbarSize="@dimen/normal"
+                android:text="Cuando hayas terminado, selecciona el botón registrar y listo los datos serán enviados"
+                android:textColor="@color/textNormal"
+                android:textSize="@dimen/normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbarSize="@dimen/normal"
+                android:text="¿No tienes conexión a INTERNET?"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:scrollbarSize="@dimen/normal"
+                android:text="No te preocupes, los datos se almacenarán en tu celular y serán enviados automáticamente cuando te conectes a INTERNET"
+                android:textColor="@color/textNormal"
+                android:textSize="@dimen/normal" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
