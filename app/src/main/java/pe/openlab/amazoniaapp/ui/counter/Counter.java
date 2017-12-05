@@ -13,7 +13,7 @@ public interface Counter {
     interface View {
         void sendData();
 
-        void dataSuccessful(Measure measure);
+        void dataSuccessful(String message);
 
         void dataError(String error);
 
@@ -24,20 +24,20 @@ public interface Counter {
 
     interface Presenter {
 
-        void dataSuccessful(Measure measure);
+        void dataSuccessful(String message);
 
         void dataError(String error);
 
-        void sendData(Measure measure);
+        void sendData(String date, int exonerated, int foreign, int national, int area_natural);
 
-        void saveData(Measure measure);
+        void saveData(String date, int exonerated, int foreign, int national, int area_natural);
 
     }
 
     interface Model {
-        void sendData(Measure measure);
+        void sendData(String date, int exonerated, int foreign, int national, int area_natural);
 
-        void saveData(Measure measure);
+        void saveData(String date, int exonerated, int foreign, int national, int area_natural);
 
     }
 }

@@ -24,7 +24,7 @@ public class PasswordView extends AppCompatActivity implements Password.View {
         setContentView(R.layout.activity_restore_password);
         showToolbar("Restaurar contraseña", true);
 
-        edtEmail = findViewById(R.id.edt_email);
+        edtEmail = findViewById(R.id.edt_username);
         btnRestore = findViewById(R.id.btn_restore);
 
         presenter = new PasswordPresenter(this);

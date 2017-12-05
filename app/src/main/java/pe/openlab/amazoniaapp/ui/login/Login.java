@@ -11,7 +11,7 @@ public interface Login {
     interface View {
         void login();
 
-        void loginSuccessful(User user);
+        void loginSuccessful(int area_natural_id, String area_natural_name);
 
         void loginError(String error);
 
@@ -20,11 +20,11 @@ public interface Login {
 
     interface Presenter {
 
-        void loginSuccessful(User user);
+        void loginSuccessful(int area_natural_id, String area_natural_name);
 
         void loginError(String error);
 
-        void login(String email, String password);
+        void login(String user, String password);
 
     }
 

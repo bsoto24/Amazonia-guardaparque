@@ -1,7 +1,5 @@
 package pe.openlab.amazoniaapp.ui.counter;
 
-import pe.openlab.amazoniaapp.data.entity.Measure;
-
 /**
  * Created by Bryam Soto on 01/12/2017.
  */
@@ -19,8 +17,8 @@ public class CounterPresenter implements Counter.Presenter {
 
 
     @Override
-    public void dataSuccessful(Measure measure) {
-        view.dataSuccessful(measure);
+    public void dataSuccessful(String message) {
+        view.dataSuccessful(message);
     }
 
     @Override
@@ -29,12 +27,12 @@ public class CounterPresenter implements Counter.Presenter {
     }
 
     @Override
-    public void sendData(Measure measure) {
-        model.sendData(measure);
+    public void sendData(String date, int exonerated, int foreign, int national, int area_natural) {
+        model.sendData(date, exonerated, foreign, national, area_natural);
     }
 
     @Override
-    public void saveData(Measure measure) {
-        model.saveData(measure);
+    public void saveData(String date, int exonerated, int foreign, int national, int area_natural) {
+        model.saveData(date, exonerated, foreign, national, area_natural);
     }
 }

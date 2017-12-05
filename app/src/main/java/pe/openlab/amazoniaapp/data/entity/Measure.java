@@ -1,51 +1,89 @@
 package pe.openlab.amazoniaapp.data.entity;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Bryam Soto on 30/11/2017.
  */
 
 public class Measure {
 
-    private int nacional;
-    private int extranjero;
-    private int paseLibre;
-    private String comment;
+    @SerializedName("approved")
+    @Expose
+    private boolean approved;
+    @SerializedName("date")
+    @Expose
+    private String date;
+    @SerializedName("exonerated")
+    @Expose
+    private int exonerated;
+    @SerializedName("foreign")
+    @Expose
+    private int foreign;
+    @SerializedName("id")
+    @Expose
+    private int id;
+    @SerializedName("national")
+    @Expose
+    private int national;
+    @SerializedName("protected_natural_area")
+    @Expose
+    private int protectedNaturalArea;
 
-    public Measure(int nacional, int extranjero, int paseLibre) {
-        this.nacional = nacional;
-        this.extranjero = extranjero;
-        this.paseLibre = paseLibre;
+    public boolean isApproved() {
+        return approved;
     }
 
-    public int getNacional() {
-        return nacional;
+    public void setApproved(boolean approved) {
+        this.approved = approved;
     }
 
-    public void setNacional(int nacional) {
-        this.nacional = nacional;
+    public String getDate() {
+        return date;
     }
 
-    public int getExtranjero() {
-        return extranjero;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void setExtranjero(int extranjero) {
-        this.extranjero = extranjero;
+    public int getExonerated() {
+        return exonerated;
     }
 
-    public int getPaseLibre() {
-        return paseLibre;
+    public void setExonerated(int exonerated) {
+        this.exonerated = exonerated;
     }
 
-    public void setPaseLibre(int paseLibre) {
-        this.paseLibre = paseLibre;
+    public int getForeign() {
+        return foreign;
     }
 
-    public String getComment() {
-        return comment;
+    public void setForeign(int foreign) {
+        this.foreign = foreign;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getNational() {
+        return national;
+    }
+
+    public void setNational(int national) {
+        this.national = national;
+    }
+
+    public int getProtectedNaturalArea() {
+        return protectedNaturalArea;
+    }
+
+    public void setProtectedNaturalArea(int protectedNaturalArea) {
+        this.protectedNaturalArea = protectedNaturalArea;
     }
 }

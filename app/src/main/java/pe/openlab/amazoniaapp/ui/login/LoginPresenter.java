@@ -17,17 +17,17 @@ public class LoginPresenter implements Login.Presenter {
     }
 
     @Override
-    public void loginSuccessful(User user) {
-        view.loginSuccessful(user);
+    public void login(String email, String password) {
+        model.login(email, password);
+    }
+
+    @Override
+    public void loginSuccessful(int area_natural_id, String area_natural_name) {
+        view.loginSuccessful(area_natural_id, area_natural_name);
     }
 
     @Override
     public void loginError(String error) {
         view.loginError(error);
-    }
-
-    @Override
-    public void login(String email, String password) {
-        model.login(email, password);
     }
 }

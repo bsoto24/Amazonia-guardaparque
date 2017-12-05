@@ -1,53 +1,83 @@
 package pe.openlab.amazoniaapp.data.entity;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by Bryam Soto on 30/11/2017.
  */
 
 public class User {
 
-    private int id;
-    private String name;
-    private String email;
-    private String role;
+    @SerializedName("account_id")
+    @Expose
+    private int accountId;
 
-    public User(int id, String name, String email, String role) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.role = role;
+    @SerializedName("account_level")
+    @Expose
+    private String accountLevel;
+
+    @SerializedName("protected_natural_area")
+    @Expose
+    private ProtectedNaturalArea protectedNaturalArea;
+
+    @SerializedName("token")
+    @Expose
+    private String token;
+
+    @SerializedName("username")
+    @Expose
+    private String username;
+
+    @SerializedName("password")
+    @Expose
+    private String password;
+
+    public String getUsername() {
+        return username;
     }
 
-    public int getId() {
-        return id;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getPassword() {
+        return password;
     }
 
-    public String getName() {
-        return name;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getAccountId() {
+        return accountId;
     }
 
-    public String getEmail() {
-        return email;
+    public void setAccountId(int accountId) {
+        this.accountId = accountId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getAccountLevel() {
+        return accountLevel;
     }
 
-
-    public String getRole() {
-        return role;
+    public void setAccountLevel(String accountLevel) {
+        this.accountLevel = accountLevel;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public ProtectedNaturalArea getProtectedNaturalArea() {
+        return protectedNaturalArea;
+    }
+
+    public void setProtectedNaturalArea(ProtectedNaturalArea protectedNaturalArea) {
+        this.protectedNaturalArea = protectedNaturalArea;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }
